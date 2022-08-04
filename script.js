@@ -17,12 +17,8 @@ async function callApi() {
   return;
 }
 
-btnRandom.onclick = () => {
-  btnRandom;
-};
-
-async function reload() {
+btnRandom.onclick = async () => {
   await callApi();
-}
+};
 
 reload();
