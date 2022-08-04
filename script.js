@@ -1,7 +1,11 @@
 const btnRandom = document.querySelector("#btn-random");
+const Loading = document.querySelector("#div-loading-card");
+const userCard = document.querySelector("#div-user-card");
 
 async function callApi() {
-  const Loading = document.querySelector("#div-loading-card");
+  userCard.style.display = "none";
+  Loading.style.display = "";
+
   const _name = document.querySelector("#p-name");
   const email = document.querySelector("#p-email");
   const location = document.querySelector("#p-address");
@@ -13,6 +17,8 @@ async function callApi() {
   email.innerText = `${result.email}`;
   document.querySelector("#span-gender-icon").innerHTML = "male" ? "👨" : "👩";
 
+  userCard.style.display = "";
+  Loading.style.display = "none";
   // console.log(resp);
   return;
 }
